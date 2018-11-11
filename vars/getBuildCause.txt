@@ -1,0 +1,11 @@
+Define el BuildCause en base a currentBuild.rawBuild.getCause
+
+vars/getBuildCause.groovy
+Retorna el BuildCause
+	SCAN, IC, AC, BD
+Modifica currentBuild.displayName con "${buildCause}#${BUILD_NUMBER}${vReplaybuildCause}"
+
+Usa las librerías globales logs
+
+Uso:
+	se utiliza desde vars/DefaultJenkinsfile.groovy

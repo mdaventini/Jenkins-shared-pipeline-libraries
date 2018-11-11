@@ -1,0 +1,7 @@
+Pipeline para crear Jobs
+
+vars/JenkinsfileCreateJobsFromConfigs.groovy
+Usa log, getJobConfigs
+
+Uso:
+	JenkinsfileCreateJobsFromConfigs()

@@ -1,0 +1,7 @@
+Lee los datos en el resource configs [nameConfig].config basado en el JOB_NAME
+
+vars/getJobConfigs.groovy
+Uso:
+	Se utiliza desde JenkinsfileCreateConfigsFrom_OSJenkins, JenkinsfileCreateJobsFromConfigs, JenkinsfileReporteConfigs, JenkinsfileJobsExecutionRevision, DefaultJenkinsfile, PipelineDeploy y PipelineRestart
+Retorna un Map con los datos
+	Ver https://docs.google.com/document/d/1Byv7dKkcHeJsOe9vRO4JM0PNO1Pvt07p45Dv8f_TkyA/edit#heading=h.v2g9eihpm8qj

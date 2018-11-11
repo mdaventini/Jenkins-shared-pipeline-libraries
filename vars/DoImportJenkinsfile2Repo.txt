@@ -1,0 +1,9 @@
+Crea los archivos Jenkinsfile en el repo
+Por cada trunk/[includedRegions]/ branches/*/[includedRegions]/ que contiene pom.xml y tienen commit reciente 
+
+vars/DoImportJenkinsfile2Repo.groovy
+Usa las librerías globales log y svnUtils
+
+Uso:
+	desde vars/JenkinsfileCreateJobsFromConfigs.groovy
+		DoImportJenkinsfile2Repo(datosConf.svnUrl, datosConf.includedRegions, datosConf.Job, debug)

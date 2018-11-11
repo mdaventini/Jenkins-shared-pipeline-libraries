@@ -1,0 +1,9 @@
+Delete de los archivos Jenkinsfile dl repo
+Por cada trunk/[includedRegions]/ branches/*/[includedRegions]/ 
+
+vars/DoDeleteJenkinsfile4Repo.groovy
+Usa las librerías globales log y svnUtils
+
+Uso:
+	desde vars/JenkinsfileCreateJobsFromConfigs.groovy
+		DoDeleteJenkinsfile4Repo(datosConf.svnUrl, datosConf.includedRegions, datosConf.Job, debug)

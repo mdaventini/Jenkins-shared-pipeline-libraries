@@ -1,0 +1,8 @@
+Pipeline en ReporteGAS para crear Reporte de Restarts de desarrollo-new
+Crea un cvs basado en los jobs -restart existentes y sus ejecuciones 
+
+vars/JenkinsfileReporte_Extraer_restarts_desarrollonew.groovy
+Usa las librerias globales log, getJobConfigs
+
+Uso:
+	JenkinsfileReporte_Extraer_restarts_desarrollonew()

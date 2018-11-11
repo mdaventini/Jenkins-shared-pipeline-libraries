@@ -1,0 +1,6 @@
+Crea/Modifica un [nameConfig].config basado en Map que recibe
+
+vars/setJobConfigs.groovy
+Uso:
+	Se utiliza desde PipelineBuild, JenkinsfileUpdateConfigs y JenkinsfileCreateConfigsFrom_OSJenkins
+		setJobConfigs(Map datosConf, String vMessage, Boolean debug = false)

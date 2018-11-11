@@ -1,0 +1,7 @@
+Pipeline para modificar .configs de forma masiva a partir de bulk/Configs.csv
+
+vars/JenkinsfileUpdateConfigs.groovy
+Usa la librería global log
+
+Uso:
+	JenkinsfileUpdateConfigs()

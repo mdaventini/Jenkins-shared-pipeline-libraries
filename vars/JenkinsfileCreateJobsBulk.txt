@@ -1,0 +1,7 @@
+Pipeline para crear Jobs de forma masiva
+
+vars/JenkinsfileCreateJobsBulk.groovy
+Usa log y build job : 'GASCreateJobsfromConfigs'
+
+Uso:
+	JenkinsfileCreateJobsBulk()

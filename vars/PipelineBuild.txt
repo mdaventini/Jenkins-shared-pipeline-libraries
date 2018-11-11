@@ -1,0 +1,9 @@
+Default pipeline para Builds SCAN, IC, AC, BD y RD 
+
+vars/PipelineBuild.groovy
+Usa las variables globales CRON_PIPELINE y CRON_SONARQUBE 
+Usa las librerías globales log, getBuildCause, getJobConfigs, svnUtils y mvnUtils
+
+Uso:
+	desde el script Jenkinsfile resguardado en el repositorio 
+		PipelineBuild()

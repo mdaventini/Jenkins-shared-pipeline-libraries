@@ -1,0 +1,8 @@
+Pipeline en ReportesGAS para crear Extraer_JobsExecutionRevision.csv
+Muestra el resultado de las ejecuciones para los org.jenkinsci.plugins.workflow.multibranch.WorkflowMultiBranchProject armando una linea por cada org.jenkinsci.plugins.workflow.job.WorkflowJob/branch
+Deja el file en /Appweb/jenkins/Extraer_JobsExecutionRevision.csv
+
+vars/JenkinsfileJobsExecutionRevision.groovy
+
+Uso:
+	JenkinsfileJobsExecutionRevision()

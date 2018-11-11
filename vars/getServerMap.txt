@@ -1,0 +1,11 @@
+Parsea los datos de un servidor a un Map
+
+vars/getServerMap.groovy
+Uso:
+	Se utiliza desde PipelineDeploy y PipelineRestart
+	
+Recibe un string con el formato USUARIO@SERVIDOR:/Appweb/jboss-x/server/INSTANCIA/deploy...
+Retorna un Map con los datos 
+	host = USUARIO@SERVIDOR
+	folder = /Appweb/jboss-x/server/INSTANCIA/deploy...
+	instance = INSTANCIA

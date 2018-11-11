@@ -1,0 +1,7 @@
+Pipeline para crear .configs de forma masiva desde /Appweb/jenkins/Extraer_BuildConfigs_OSJenkinsDESA.csv y /Appweb/jenkins/Extraer_deploys_OSJenkins*.csv
+
+vars/JenkinsfileCreateConfigsFrom_OSJenkins.groovy
+Usa log, getTargetsOSJenkins, getJobConfigs y setJobConfigs
+
+Uso:
+	JenkinsfileCreateConfigsFrom_OSJenkins()

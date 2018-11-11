@@ -1,0 +1,17 @@
+Utils para log, warnings y errores
+
+vars/log.groovy
+Uso:
+	Se utiliza desde el resto de las librerías globales
+	
+	log.info(String message)
+		echo "[PIPELINEINFO] ${message}"
+
+	log.debug(String message, Boolean debug = false)
+		en caso que debug sea true
+			echo "[PIPELINEDEBUG] ${message}"
+		
+	log.error(String message)
+		echo "[PIPELINEERROR] ${message}"
+		modifica currentBuild.description agregando \n ERROR! ${message}"
+		ejecuta error message: "${message}"

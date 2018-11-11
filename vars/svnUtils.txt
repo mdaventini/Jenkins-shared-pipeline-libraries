@@ -1,0 +1,47 @@
+Utils para svn
+
+vars/svnUtils.groovy
+	
+	svnUtils.customCheckout(String vsvnUrl, String vincludedRegions, Boolean debug = false)
+		Hace checkout de scm teniendo en cuenta excludedUsers: 'jenkins' y includedRegions
+		Uso:
+			Se utiliza desde DefaultJenkinsfile
+		En caso de error corta el pipeline
+		
+	svnUtils.getLastCommit(String vsvnUrl, Boolean debug = false)
+		Verifica la fecha de ultimo commit
+		Da error si no puede obtener info de svn
+		Retorna un map con [fecha: 'Desconocido', edad: -1]
+		Uso:
+			Se utiliza desde DefaultJenkinsfile
+			
+			Hace add y commit en svn
+
+	svnUtils.DoAddCommitSvn(String vDir, String vFiles, String vMessage, Boolean debug = false)
+		Hace add y commit de un file en svn
+		En caso que no se indique el file hace solo commit
+		Uso:
+			Se utiliza desde JenkinsfileCreateConfigsFrom_OSJenkins y JenkinsfileReporteConfigs
+			
+	svnUtils.getExiste(String vUrlPathFile, Boolean debug = false)
+		Ejecuta svn info de vUrlPathFile para saber si existe
+		Retorna falso si no existe
+		Uso:
+			Se utiliza desde DoCopyCommitSvn
+	
+	svnUtils.DoImportCommitSvn(String vFile, String vUrlPath, String vMessage, Boolean debug = false)
+		Copia y commit de un file del workspace actual a un UrlPath en svn
+		Uso:
+			Se utiliza desde DoImportJenkinsfile2Repo
+			
+	svnUtils.getBorrado(String vsvnUrl, String vPath, String vFile, Boolean debug = false)
+		Ejecuta svn log de vUrlPathFile para saber si fue borrado
+		Retorna falso si no fue borrado
+		Uso:
+			Se utiliza desde DoImportJenkinsfile2Repo
+
+	svnUtils.DoDeleteCommitSvn(String vUrlPath, String vMessage, Boolean debug = false)
+		Delete y commit de un file en UrlPath en svn
+		Uso:
+			Se utiliza desde DoDeleteJenkinsfile4Repo
+			

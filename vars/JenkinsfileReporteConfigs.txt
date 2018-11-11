@@ -1,0 +1,8 @@
+Pipeline en ReporteGAS para crear Configs.csv
+Crea un cvs basado en las configs existentes
+
+vars/JenkinsfileReporteConfigs.groovy
+Usa las librerías globales log, getJobConfigs, DoWriteReportLineFromMap y svnUtils.DoAddCommitSvn
+
+Uso:
+	JenkinsfileReporteConfigs()

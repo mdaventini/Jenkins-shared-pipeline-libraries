@@ -1,0 +1,7 @@
+Declarative Pipeline para restart
+
+vars/PipelineRestart
+Usa las librerías globales log y getJobConfigs
+
+Uso:
+	PipelineRestart()

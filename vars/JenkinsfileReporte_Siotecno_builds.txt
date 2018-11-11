@@ -1,0 +1,10 @@
+Pipeline en ReporteGAS para crear Reporte de Builds para Siotecno
+Crea el reporte  /www/siotecno_logs/jenkins/Siotecno_builds.csv
+ /Appweb/jenkins/Extraer_builds_OSJenkinsDESA.csv
+ /Appweb/jenkins/Extraer_builds_desarrollonew.csv
+ 
+vars/JenkinsfileReporte_Siotecno_builds.groovy
+Usa las librerias globales log y DoUnificarReportes
+
+Uso:
+	JenkinsfileReporte_Siotecno_builds()

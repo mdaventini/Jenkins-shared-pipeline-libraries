@@ -1,0 +1,8 @@
+Pipeline en ReporteGAS para crear Reporte de Deploys de desarrollo-new
+Crea un cvs basado en los jobs -deploy existentes y sus ejecuciones 
+
+vars/JenkinsfileReporte_Extraer_deploys_desarrollonew.groovy
+Usa las librerias globales log, getJobConfigs
+
+Uso:
+	JenkinsfileReporte_Extraer_deploys_desarrollonew()

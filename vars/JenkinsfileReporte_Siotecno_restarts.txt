@@ -1,0 +1,11 @@
+Pipeline en ReporteGAS para crear Reporte de Restarts para Siotecno
+Crea el reporte  /www/siotecno_logs/jenkins/Siotecno_restarts.csv
+ /Appweb/jenkins/Extraer_restarts_OSJenkinsDESA.csv
+ /Appweb/jenkins/Extraer_restarts_OSJenkinsPRO.csv
+ /Appweb/jenkins/Extraer_restarts_desarrollonew.csv
+ 
+vars/JenkinsfileReporte_Siotecno_restarts.groovy
+Usa las librerias globales log y DoUnificarReportes
+
+Uso:
+	JenkinsfileReporte_Siotecno_restarts()

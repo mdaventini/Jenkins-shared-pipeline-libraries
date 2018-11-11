@@ -1,0 +1,8 @@
+Utils para los pipelines
+
+vars/utils.groovy
+Uso:
+	Se utiliza desde el resto de las librerías globales
+	
+	utils.agregar(String actual, String nuevo, Boolean debug = false) 
+	Agrega un string nuevo + "|" a uno existente solo si no esta repetido	

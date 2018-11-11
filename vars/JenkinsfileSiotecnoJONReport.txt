@@ -1,0 +1,10 @@
+Pipeline para ejecutar reportes Siotecno en un host determinado
+Expone los files de /www/siotecno_logs/${report_folder} en jenkins desarrollo-new
+
+vars/JenkinsfileSiotecnoJONReport.groovy
+
+Uso:
+	JenkinsfileSiotecnoJONReport([host], [report_folder], [debug (default false)])
+		[host]: indica el host donde se va a conectar para ejecutar jon-smreport/bin/jon-smreport.sh
+		[report_folder]: indica el folder en el servidor donde se copiaron los cvs desde el servidor [host] (valores posibles: JON-D-T-PP, JON-P)
+		[debug]: true agrega logs del tipo [PIPELINEDEBUG]

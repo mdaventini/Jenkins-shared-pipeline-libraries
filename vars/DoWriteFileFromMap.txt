@@ -1,0 +1,8 @@
+Crea un archivo a partir del map datosConfig
+
+vars/DoWriteFileFromMap.groovy
+Usa las librerías globales log
+
+Uso:
+	desde vars/JenkinsfileCreateConfigsFrom_OSJenkins.groovy y JenkinsfileUpdateConfigs.groovy
+		DoWriteFileFromMap(datosConfig, vFileName, debug)

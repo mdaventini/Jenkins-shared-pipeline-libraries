@@ -1,0 +1,8 @@
+Pipeline en ReporteGAS para crear Reporte de Builds de desarrollo-new
+Crea un cvs basado en los jobs existentes y sus ejecuciones IC, BD y RD
+
+vars/JenkinsfileReporte_Extraer_builds_desarrollonew.groovy
+Usa las librerias globales log, getJobConfigs
+
+Uso:
+	JenkinsfileReporte_Extraer_builds_desarrollonew()

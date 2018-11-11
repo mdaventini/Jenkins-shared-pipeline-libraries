@@ -1,0 +1,25 @@
+Utils para Jobs y sus ejecuciones anteriores
+
+vars/getRecExecution.groovy
+Usa log
+
+Uso:
+	getRecExecution.ListaJobs(Boolean debug = false)
+		Arma una lista con los jobs de compilacion
+		Retorna la lista
+		Uso:
+			Se utiliza desde JenkinsfileRenameJobs
+			
+	getRecExecution.ByName(List<Item> LgetAllItems, String jobName, Boolean debug = false)
+		Busca en la lista un jobName 
+		Retorna un objeto tipo jobName
+		Uso:
+			Se utiliza desde JenkinsfileRenameJobs
+
+	LastToKeep(Job vJob, Boolean debug = false)
+		Busca la ejecucion mas reciente de Release y Snapshot para un Job
+		Retorna un Map [RHaschangeSets: false, Rnumero: 0, Rfecha: '', Rversion: '', Rurl: '', SHaschangeSets: false, Snumero: 0, Sfecha: '', Sversion: '', Surl: '']
+		Uso:
+			Se utiliza desde DefaultJenkinsfile, JenkinsfileRevisionReport
+			
+

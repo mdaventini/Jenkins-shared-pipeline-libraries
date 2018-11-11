@@ -1,0 +1,19 @@
+Crea un archivo unificado a partir del archivo indicado
+
+vars/DoUnificarReportes.groovy
+Usa las librerías globales log y DoWriteFileFromMap
+
+Uso:
+	desde vars/JenkinsfileReporte_Siotecno_builds.groovy
+		DoUnificarReportes(vFile, "/Appweb/jenkins/Extraer_builds_desarrollonew.csv", header, [:], debug)
+		DoUnificarReportes(vFile, "/Appweb/jenkins/Extraer_builds_OSJenkinsDESA.csv", header, [:], debug)
+		
+	desde vars/JenkinsfileReporte_Siotecno_deploys.groovy
+		DoUnificarReportes(vFile, "/Appweb/jenkins/Extraer_deploys_desarrollonew.csv", header, [:], debug)
+		DoUnificarReportes(vFile, "/Appweb/jenkins/Extraer_deploys_OSJenkinsDESA.csv", header, [:], debug)
+		DoUnificarReportes(vFile, "/Appweb/jenkins/Extraer_deploys_OSJenkinsPRO.csv", header, [:], debug)
+	
+	desde vars/JenkinsfileReporte_Siotecno_restarts.groovy 
+		DoUnificarReportes(vFile, "/Appweb/jenkins/Extraer_restarts_desarrollonew.csv", header, mFechaUltimoInicio, debug)
+		DoUnificarReportes(vFile, "/Appweb/jenkins/Extraer_restarts_OSJenkinsDESA.csv", header, mFechaUltimoInicio, debug)
+		DoUnificarReportes(vFile, "/Appweb/jenkins/Extraer_restarts_OSJenkinsPRO.csv", header, mFechaUltimoInicio, debug)

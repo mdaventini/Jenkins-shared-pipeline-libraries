@@ -1,0 +1,8 @@
+Declarative Pipeline para deploy
+Obtiene el archivo con las urls a deployar de Nexus y ejecuta el deploy de cada artefacto a los servidores indicados
+
+vars/PipelineDeploy
+Usa las librerías globales log, getJobConfigs y getServerMap
+
+Uso:
+	PipelineDeploy()

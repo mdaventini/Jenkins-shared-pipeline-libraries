@@ -1,0 +1,12 @@
+Escribe una linea en el reporte a partir de header y un map de datos
+
+vars/DoWriteReportLineFromMap.groovy
+Usa las librerías globales log
+
+Uso:
+	desde vars/JenkinsfileJobExecutionRevision
+		DoWriteReportLineFromMap(data, "v", header, vFileJobsExecutionRevision, debug)
+	desde vars/JenkinsfileReporteConfigs
+		DoWriteReportLineFromMap(datosConf, "", header, vFileConfigs, debug)
+	desde vars/DoUnificarReportes
+		DoWriteReportLineFromMap(datos, "", vHeader, vFile, debug)

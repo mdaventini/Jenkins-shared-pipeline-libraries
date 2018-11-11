@@ -1,0 +1,65 @@
+Utils para maven
+
+vars/mvnUtils.groovy
+Uso:
+	Se utiliza desde DefaultJenkinsfile
+	
+	mvnUtils.getDatosMvn(Map datosConf, Boolean debug = false)
+		Genera el Map con los datos necesarios para ejecutar goals maven
+		
+	mvnUtils.getMappedVersion(String vpomVersion, Boolean debug = false)
+		Hace split de la version indicada en el pom, mapeando a [majorV: '1', minorV: '0', bugfixV: '0', preReleaseV: '', isSnapshotV: 'NO' ] from https://semver.org/lang/es/
+		Uso:
+			Se utiliza desde mvnUtils.getDatosMvn
+
+	mvnUtils.exec(String maven, String jdk, String mavenSettingsConfig, String  mavenOpts, String shcommand, Boolean debug = false)
+		Ejecuta https://jenkins.io/doc/pipeline/steps/pipeline-maven/#withmaven-provide-maven-environment- Pipeline Maven Integration Plugin
+		Uso:
+			Se utiliza desde mvnUtils.validate, 
+
+	mvnUtils.validate(Map datosMvn, String goal, Boolean debug = false)
+		Ejecuta exec(datosMvn.maven, datosMvn.jdk, datosMvn.mavenSettingsConfig, datosMvn.mavenOpts, goal, debug)
+		Chequea el resultado de la ejecución y en caso que corresponda, ejecuta el error
+		
+	mvnUtils.installNoTests(Map datosMvn, String goal, Boolean debug = false)
+		Ejecuta exec(datosMvn.maven, datosMvn.jdk, datosMvn.mavenSettingsConfig, datosMvn.mavenOpts, goal, debug)
+		Chequea el resultado de la ejecución y en caso que corresponda, ejecuta el error
+		Retorna el mapeo de datos o null
+		
+	mvnUtils.test(Map datosMvn, String goal, Boolean debug = false)
+		Ejecuta exec(datosMvn.maven, datosMvn.jdk, datosMvn.mavenSettingsConfig, datosMvn.mavenOpts, goal, debug)
+		Chequea el resultado de la ejecución y en caso que corresponda, ejecuta el error
+
+	mvnUtils.sonarqubePreview(Map datosMvn, String goal, Boolean debug = false)
+		Ejecuta exec("Maven-3.5.2", "Java 1.8.x", datosMvn.mavenSettingsConfig, datosMvn.mavenOpts, goal, debug)
+		Chequea el resultado de la ejecución y en caso que corresponda, ejecuta el error
+		Retorna la información de BUILD BREAKER
+		
+	mvnUtils.sonarqube(Map datosMvn, String goal, Boolean debug = false)
+		Ejecuta exec("Maven-3.5.2", "Java 1.8.x", datosMvn.mavenSettingsConfig, datosMvn.mavenOpts, goal, debug)
+		Chequea el resultado de la ejecución y en caso que corresponda, ejecuta el error
+		Elimina el jar sonar-runner-batch[aleatorio].jar generado en el workspace
+
+	mvnUtils.dependencycheck(Map datosMvn, String goal, Boolean debug = false)
+		Ejecuta exec("Maven-3.5.2", "Java 1.8.x", datosMvn.mavenSettingsConfig, datosMvn.mavenOpts, goal, debug)
+		Chequea el resultado de la ejecución y en caso que corresponda, ejecuta el error
+	
+	mvnUtils.updateversions(Map datosMvn, String goal, Boolean debug = false)
+		Ejecuta exec("Maven-3.5.2", "Java 1.8.x", datosMvn.mavenSettingsConfig, datosMvn.mavenOpts, goal, debug)
+		Chequea el resultado de la ejecución y en caso que corresponda, ejecuta el error
+		
+	mvnUtils.deploySNAPSHOT(Map datosMvn, String goal, Boolean debug = false)
+		Ejecuta exec(datosMvn.maven, datosMvn.jdk, datosMvn.mavenSettingsConfig, datosMvn.mavenOpts, goal, debug)
+		Chequea el resultado de la ejecución y en caso que corresponda, ejecuta el error
+		Chequea la existencia de artefactos para deploy
+			En caso que corresponda ejecuta un deploy-file del archivo con artefactos
+		Retorna la url de archivo de artefactos o null
+
+	mvnUtils.release(Map datosMvn, String prepare, String perform, Boolean debug = false)
+		Ejecuta exec(datosMvn.maven, datosMvn.jdk, datosMvn.mavenSettingsConfig, datosMvn.mavenOpts, prepare, debug)
+		Chequea el resultado de la ejecución y en caso que corresponda, ejecuta el error
+		Ejecuta exec(datosMvn.maven, datosMvn.jdk, datosMvn.mavenSettingsConfig, datosMvn.mavenOpts, perform, debug)
+		Chequea el resultado de la ejecución y en caso que corresponda, ejecuta el error
+		Chequea la existencia de artefactos para deploy
+			En caso que corresponda ejecuta un deploy-file del archivo con artefactos
+		Retorna la url de archivo de artefactos o null

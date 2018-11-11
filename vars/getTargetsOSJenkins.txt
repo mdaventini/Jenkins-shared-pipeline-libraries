@@ -1,0 +1,10 @@
+Busca en /Appweb/jenkins/Extraer_deploys_OSJenkins*.csv los datos para Desarrollo, Test, Preproduccion y Produccion
+
+vars/getTargetsOSJenkins.groovy
+Usa las librerías globales log y las funciones locales
+
+Uso:
+	desde vars/JenkinsfileCreateConfigsFrom_OSJenkins.groovy
+		Recibe datosConf
+		Retorna datosConf con cambios en desa, test, prepro, prod
+		datosConfig = getTargetsOSJenkins.extraerOSJenkins(datosConfig, debug)

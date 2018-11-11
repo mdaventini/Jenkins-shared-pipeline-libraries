@@ -1,0 +1,11 @@
+Pipeline en ReporteGAS para crear Reporte de Deploys para Siotecno
+Crea el reporte  /www/siotecno_logs/jenkins/Siotecno_deploys.csv
+ /Appweb/jenkins/Extraer_deploys_OSJenkinsDESA.csv
+ /Appweb/jenkins/Extraer_deploys_OSJenkinsPRO.csv
+ /Appweb/jenkins/Extraer_deploys_desarrollonew.csv
+
+vars/JenkinsfileReporte_Siotecno_deploys.groovy
+Usa las librerias globales log y DoUnificarReportes
+
+Uso:
+	JenkinsfileReporte_Siotecno_deploys()
